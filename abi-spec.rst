@@ -120,7 +120,7 @@
 
   否则，比如 ``Ti`` 是动态类型时，它们被定义为
 
-    ``head(X(i)) = enc(len(head(X(1)) ... head(X(k-1)) tail(X(1)) ... tail(X(i-1))))``
+    ``head(X(i)) = enc(len(head(X(1)) ... head(X(k)) tail(X(1)) ... tail(X(i-1))))``
     ``tail(X(i)) = enc(X(i))``
 
   注意，在动态类型的情况下，由于 head 部分的长度仅取决于类型而非值，所以 ``head(X(i))`` 是定义明确的。它的值是从 ``enc(X)`` 的开头算起的，``tail(X(i))`` 的起始位在 ``enc(X)`` 中的偏移量。
